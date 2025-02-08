@@ -101,6 +101,8 @@ local function logRegradeFailuresToChat(characterName, resultCode, itemLink, old
         api.Log:Info("|cFFFFF8C7" .. characterName .. " failed their regrade, |cFFF8BD47Downgrading|r their " .. itemLink .. " from |cFFf95252Celestial|r to |cFFc267cdArcane|r")
     elseif resultCode == ENCHANT_RESULT.BREAK then 
         api.Log:Info("|cFFFFF8C7" .. characterName .. " failed their regrade, |cFFFF6060Destroying|r their " .. itemLink)
+    elseif resultCode == ENCHANT_RESULT.FAIL then 
+        api.Log:Info(("|cFFFFF8C7" .. characterName .. " failed their regrade, |cFFF8BD47Anchoring|r their " .. itemLink .. " like a complete and total coward."))
     end 
     
 end
